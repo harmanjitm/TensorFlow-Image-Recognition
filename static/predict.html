@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emerging Trends - TensorFlow Image Recognition</title>
+</head>
+
+<body>
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="progress progress-bar progress-bar-striped progress-bar-animated mb-2">Model is loading.</div>
+                </div>
+            </div>
+            <!-- Row to select an image -->
+            <div class="row">
+                <div class="col-6">
+                    <input id="image-selector" class="form-control border-0" type="file">
+                </div>
+                <div class="col-6">
+                    <button id="predict-button" class="btn btn-dark float-right">Predict Image</button>
+                </div>
+            </div>
+            <hr>
+            <!-- Top predicitons from the model -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="ml-3">Predictions</h2>
+                    <table width="100%" id="prediction-list"></table>
+                </div>
+            </div>
+            <hr>
+            <!-- Selected image -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="ml-3">Selected Image</h2>
+                    <img id="selected-image" width="700" height="auto" class="ml-3" src="" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
+    <script src="imagenet_classes.js"></script>
+    <script src="predict.js"></script>
+</body>
+
+</html>
